@@ -28,8 +28,19 @@ body{
     left: 243px;
     z-index: 10;
     background-color: rgba(64,86,61,1);
-    width: 100%;
-    
+    width: 100%;   
+}
+
+.profile-header-logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #535353;
+    margin-left: 1px;
 }
 
 .fake-aside{
@@ -95,7 +106,9 @@ body{
     display: block;
     background: white;
 }
-
+.btn-header-back:hover, .btn-header-forward:hover{
+    cursor: pointer;
+}
 .btn-header-back::after{
     bottom: 3px;
     transform: rotate(135deg);
@@ -142,6 +155,10 @@ body{
     border-style: solid;
     border-color: transparent #fff;  
 }
+.profile-header:hover{
+    background-color: #282828;
+    cursor: pointer;
+}
 
 .profile-logo-svg{
     width: 28px;
@@ -182,7 +199,22 @@ body{
     height: 40px;
     align-items: center;
     color: #aeaeae;
+    
 }
+.nav-font{
+    font-size: 0.875rem;
+    line-height: 1rem;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
+.playlist-font{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-transform: none;
+    letter-spacing: normal;
+}
+
 .aside-nav-description{
     margin-left: 17px;
 }
@@ -274,12 +306,34 @@ body{
     position: relative;
     transition: background-color 0.3s ease 0s;
 }
-
+.main-playlist:hover{
+    background-color: rgba(255, 255, 255, 0.25);
+    opacity: 1;
+}
 .main-playlist-img{
     position: relative;
     right: 2px;
     width: 80px;
     height: 80px;
+}
+
+.play-btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+    position: relative;
+    transition-duration: 33ms;
+    background-color:#1ed760;
+    margin-left: auto;
+    margin-right: 20px;
+    box-shadow: 0 8px 8px rgb(0 0 0 / 30%);
+    color: #000000;
+    border-radius: 500px;
+    font-size: inherit;
+    width: 48px;
+    height: 48px;
 }
 
 .start-main-content-title{
@@ -325,11 +379,11 @@ body{
 .section-content{
     display: grid;
     white-space: nowrap;
-    grid-gap: 24px;
-    grid-template-columns: repeat(auto-fill,minmax(182px, 182px));
-    grid-auto-rows: 0;
-    grid-template-rows: 1fr;
+    grid-gap: 0px 24px;
+    grid-template-columns: repeat(auto-fill,minmax(182px, 1fr));
+    grid-auto-rows: 0px;
     overflow-y: hidden;
+    grid-template-rows: 1fr;
 }
 
 .card-container{
@@ -340,6 +394,10 @@ body{
     position: relative;
     transition: background-color .3s ease;
     width: 100%;
+}
+.card-container:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .card-image{
@@ -409,6 +467,7 @@ body{
 
 .plaing-track-like, .plaing-track-toggle{
     background: transparent;
+    fill: #b3b3b3;
     margin-top: 1px;
     margin-right: 17px;
     border: 0;
@@ -439,6 +498,7 @@ body{
     align-items: center;
     background: transparent;
     border: none;
+    fill: #b3b3b3;
     color: #b3b3b3;
 }
 
@@ -455,6 +515,10 @@ body{
     transition: none 33ms cubic-bezier(.3,0,.7,1);
     transition-property: all;
     width: 32px;
+}
+
+.play-stop-btn:hover{
+    transform: scale(1.06);
 }
 
 .time-panel{
@@ -516,13 +580,26 @@ body{
     background-color: #464646;
 }
 
+.hover-white:hover{
+    color: white;
+}
 
+.hover-white-delay:hover{
+    color: white;
+    transition-timing-function: linear;
+    transition-duration: .3s;
+}
+
+
+.btn-hover-white:hover{
+    fill: white;
+}
 
 
 
 
 @font-face {
     font-family: "Proxima Nova"; 
-    src: url("static/fonts/ProximaNova-Semibold.ttf") format("truetype"); 
+    src: url("static/fonts/ProximaNova-Bold.ttf") format("truetype"); 
     font-weight: bold;
     } 
