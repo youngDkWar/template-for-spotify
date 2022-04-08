@@ -10,15 +10,7 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
     <title>React App</title>
   </head>
   <body class="app">
@@ -26,8 +18,8 @@
     <header class="fake-header"></header>
     <header class="header">
       <div class="button-container">
-        <button class="btn-header-back"></button>
-        <button class="btn-header-forward"></button>
+        <button class="btn-header-back btn-header"></button>
+        <button class="btn-header-forward btn-header"></button>
       </div>
       <button class="profile-header">
         <div class="profile-header-logo">
@@ -110,7 +102,7 @@
         <div class="start-main-content">
           <a class="main-playlist" href="">
             <img class="main-playlist-img" src="images/1.jpg">
-            <span>BORN TO TRAP</span>
+            <span class="main-playlist-span">BORN TO TRAP</span>
             <div class="play-btn">
               <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
@@ -119,7 +111,7 @@
           </a>
           <a class="main-playlist" href="">
             <img class="main-playlist-img" src="images/3.jpg">
-            <span>IVOXYGEN</span>
+            <span class="main-playlist-span">IVOXYGEN</span>
             <div class="play-btn">
               <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
@@ -128,7 +120,7 @@
           </a>
           <a class="main-playlist" href="">
             <img class="main-playlist-img" src="images/4.jpg">
-            <span>Imagine Dragons</span>
+            <span class="main-playlist-span">Imagine Dragons</span>
             <div class="play-btn">
               <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
@@ -137,7 +129,7 @@
           </a>
           <a class="main-playlist" href="">
             <img class="main-playlist-img" src="images/2.jpg">
-            <span>Mercury - Act 1</span>
+            <span class="main-playlist-span">Mercury - Act 1</span>
             <div class="play-btn">
               <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
@@ -146,7 +138,7 @@
           </a>
           <a class="main-playlist" href="">
             <img class="main-playlist-img" src="images/5.jpg">
-            <span>Imagine Dragons - Bones</span>
+            <span class="main-playlist-span">Imagine Dragons - Bones</span>
             <div class="play-btn">
               <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
@@ -155,7 +147,7 @@
           </a>
           <a class="main-playlist" href="">
             <img class="main-playlist-img" src="images/6.jpg">
-            <span>Karmageddon</span>
+            <span class="main-playlist-span">Karmageddon</span>
             <div class="play-btn">
               <svg viewBox="0 0 24 24" width="24" height="24">
                 <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
@@ -397,7 +389,7 @@
             </svg>
           </button>
           <div class="volume-thumb"></div>
-          <button class="open-full-screen-btn control-btn btn-hover-white">
+          <button type="button" class="open-full-screen-btn control-btn btn-hover-white">
             <svg viewBox="0 0 16 16" width="16" height="16">
               <path d="M6.53 9.47a.75.75 0 010 1.06l-2.72 2.72h1.018a.75.75 0 010 1.5H1.25v-3.579a.75.75 0 011.5 0v1.018l2.72-2.72a.75.75 0 011.06 0zm2.94-2.94a.75.75 0 010-1.06l2.72-2.72h-1.018a.75.75 0 110-1.5h3.578v3.579a.75.75 0 01-1.5 0V3.81l-2.72 2.72a.75.75 0 01-1.06 0z"></path>
             </svg>

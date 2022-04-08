@@ -6,16 +6,16 @@
 }
 a {
     text-decoration: none;
+    /* я понимаю, что не стоит использовать стили по тегу, однако в этом случае я абсолютно
+       уверен в том, что не буду использовать подчеркивание ссылки во всем проект, и на мой
+       взгляд лучше 1 раз прописать 1 строку, чем вставлять её сотню раз в каждый класс */
 }
-body{
-    line-height: 1.6;
-}
-
 .app{
     display: grid;
     height: 100vh;
     grid-template-columns: 243px 1fr;
     grid-template-rows: 64px 1fr 90px;
+    line-height: 1.6;
 }
 
 .fake-header{
@@ -87,7 +87,7 @@ body{
     padding: 16px 31px;
 }
 
-.btn-header-back, .btn-header-forward{
+.btn-header{
     width: 32px;
     height: 32px;
     background-color: #0a051d;
@@ -95,8 +95,8 @@ body{
     margin-right: 14px;
     border-radius: 50%;
 }
-.btn-header-back::before, .btn-header-back::after, 
-.btn-header-forward::before, .btn-header-forward::after{
+
+.btn-header::before, .btn-header::after{
     content:"";
     position: relative;
     border-radius: 1px;
@@ -106,9 +106,11 @@ body{
     display: block;
     background: white;
 }
-.btn-header-back:hover, .btn-header-forward:hover{
+
+.btn-header:hover{
     cursor: pointer;
 }
+
 .btn-header-back::after{
     bottom: 3px;
     transform: rotate(135deg);
@@ -345,7 +347,7 @@ body{
     letter-spacing: -0.04em;
 }
 
-.main-playlist span{
+.main-playlist-span{
     margin-left: 15px;
 }
 
