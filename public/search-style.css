@@ -3,13 +3,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Proxima Nova;
-}
-a {
     text-decoration: none;
-    /* я понимаю, что не стоит использовать стили по тегу, однако в этом случае я абсолютно
-       уверен в том, что не буду использовать подчеркивание ссылки во всем проект, и на мой
-       взгляд лучше 1 раз прописать 1 строку, чем вставлять её сотню раз в каждый класс */
 }
+
 .app{
     display: grid;
     height: 100vh;
@@ -220,7 +216,7 @@ a {
 .aside-nav-description{
     margin-left: 17px;
 }
-.svg-aside-plus, .svg-aside-heart{
+.svg-aside{
     padding: 4px;
     border-radius: 1px;
     width: 24px;
@@ -228,7 +224,7 @@ a {
     margin-right: 15px;
     background-color: #aeaeae;
 }
-.create-playlist, .favorite-tracks{
+.aside-container-style{
     display: flex;
     padding: 20px 24px;
     align-items: center;
@@ -463,7 +459,7 @@ a {
     letter-spacing: normal;
 }
 
-.plaing-track-like, .plaing-track-toggle{
+.plaing-track{
     background: transparent;
     fill: #b3b3b3;
     margin-top: 1px;
@@ -526,7 +522,7 @@ a {
     margin-top: 10px;
 }
 
-.time-start, .time-end{
+.time-text{
     position: relative;
     z-index: 13;
     font-size: 0.6875rem;
@@ -547,7 +543,7 @@ a {
 }
 
 .time-thumb{
-    transform: translateX(calc(-100% + 30%));
+    transform: translateX(-70%);
     position: absolute;
     background-color: #b3b3b3;
     width: 32.45%;
