@@ -5,6 +5,11 @@
     font-family: Proxima Nova;
     text-decoration: none;
 }
+
+#login, #loggedin {
+    display: none;
+}
+
 .app{
     display: grid;
     height: 100vh;

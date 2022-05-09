@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="main-style.css">
+    <link rel="stylesheet" href="search-style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -14,12 +14,23 @@
     <title>React App</title>
   </head>
   <body class="app">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
     <div class="fake-header"></div>
     <header class="header">
       <div class="button-container">
         <button type="button" class="btn-header-back btn-header"></button>
         <button type="button" class="btn-header-forward btn-header"></button>
+      </div>
+      <div class="search-container">
+        <form role="search">
+          <input class="search-input" maxlength="800" autocorrect="off" autocapitalize="off" 
+                 spellcheck="false" placeholder="Исполнитель, трек или подкаст" 
+                 data-testid="search-input" value="" style="color: rgb(0, 0, 0);">
+        </form>
+        <div class="search-logo">
+          <svg role="img" height="24" width="24" aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path>
+          </svg>
+        </div>
       </div>
       <button type="button" class="profile-header">
         <div class="profile-header-logo">
@@ -33,20 +44,21 @@
 
     <div class="fake-aside"></div>
     <aside class="main-aside">
-      <a href="#" class="ref-main-page">
+      <a href="main.html" class="ref-main-page">
         <img class="main-logo" src="main_logo_white.svg" alt="официальное лого Spotify">
       </a>
 
       <nav class="aside-main-nav">
         <a href="#" class="ref-nav-main nav-font hover-white-delay">
           <svg class="logo-house">
-            <path fill="#ffffff" d="M13.5 1.515a3 3 0 00-3 0L3 5.845a2 2 0 00-1 1.732V21a1 1 0 001 1h6a1 1 0 001-1v-6h4v6a1 1 0 001 1h6a1 1 0 001-1V7.577a2 2 0 00-1-1.732l-7.5-4.33z"></path>
+            <path fill="#aeaeae" d="M12.5 3.247a1 1 0 00-1 0L4 7.577V20h4.5v-6a1 1 0 011-1h5a1 1 0 011 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 013 0l7.5 4.33a2 2 0 011 1.732V21a1 1 0 01-1 1h-6.5a1 1 0 01-1-1v-6h-3v6a1 1 0 01-1 1H3a1 1 0 01-1-1V7.577a2 2 0 011-1.732l7.5-4.33z"></path>
           </svg>
-          <span class="aside-nav-description" style="color: white;">Главная</span>
+          <span class="aside-nav-description hover-white-delay">Главная</span>
         </a>
-        <a href="search.html" class="ref-nav-main nav-font hover-white-delay">
+        <a href="search.html" style="color: #ffffff;" class="ref-nav-main nav-font">
           <svg class="logo-house">
-            <path fill="#aeaeae" d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 101.414-1.414l-4.344-4.344a9.157 9.157 0 002.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.28z"></path>
+            <path fill="#ffffff" d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"></path>
+            <path fill="#ffffff" d="M1.126 10.558c0-5.14 4.226-9.28 9.407-9.28 5.18 0 9.407 4.14 9.407 9.28a9.157 9.157 0 01-2.077 5.816l4.344 4.344a1 1 0 01-1.414 1.414l-4.353-4.353a9.454 9.454 0 01-5.907 2.058c-5.18 0-9.407-4.14-9.407-9.28zm9.407-7.28c-4.105 0-7.407 3.274-7.407 7.28s3.302 7.279 7.407 7.279 7.407-3.273 7.407-7.28c0-4.005-3.302-7.278-7.407-7.278z"></path>
           </svg>
           <span class="aside-nav-description">Поиск</span>
         </a>
@@ -66,7 +78,7 @@
           <span class="nav-font hover-white-delay">Создать плейлист</span>
         </button>
         <button type="button" class="favorite-tracks aside-container-style">
-          <svg class="svg-aside svg-aside-heart">
+          <svg class=" svg-aside svg-aside-heart">
             <path fill="#aeaeae" d="M15.724 4.22A4.313 4.313 0 0012.192.814a4.269 4.269 0 00-3.622 1.13.837.837 0 01-1.14 0 4.272 4.272 0 00-6.21 5.855l5.916 7.05a1.128 1.128 0 001.727 0l5.916-7.05a4.228 4.228 0 00.945-3.577z"></path>
           </svg>
           <span class="nav-font hover-white-delay">Любимые треки</span>
@@ -96,206 +108,103 @@
     </aside>
 
     <main class="main">
-
-      <section class="section-start-content">
-        <h2 class="start-main-content-title">Добрый вечер</h2>
-        <div class="start-main-content">
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/1.jpg">
-            <span class="main-playlist-span">BORN TO TRAP</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
+      <section>
+        <div class="section-head-container">
+          <a href="#" class="section-head" style="color: white;"><h2>Топ жанров</h2></a>
+        </div>
+        <div class="section-content-main-search">
+          <a href="#" class="main-genre-card color-186-93-7">
+            <h3 class="main-genre-card-head">Хип-хоп</h3>
+            <img class="main-genre-card-img" src="https://i.scdn.co/image/ab67706f000000029bb6af539d072de34548d15c"> 
           </a>
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/3.jpg">
-            <span class="main-playlist-span">IVOXYGEN</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
+          <a href="#" class="main-genre-card color-141-103-171">
+            <h3 class="main-genre-card-head">Поп</h3>
+            <img class="main-genre-card-img" src="https://t.scdn.co/images/0a74d96e091a495bb09c0d83210910c3"> 
           </a>
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/4.jpg">
-            <span class="main-playlist-span">Imagine Dragons</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
-          </a>
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/2.jpg">
-            <span class="main-playlist-span">Mercury - Act 1</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
-          </a>
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/5.jpg">
-            <span class="main-playlist-span">Imagine Dragons - Bones</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
-          </a>
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/6.jpg">
-            <span class="main-playlist-span">Karmageddon</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
+          <a href="#" class="main-genre-card color-230-30-50">
+            <h3 class="main-genre-card-head">Рок</h3>
+            <img class="main-genre-card-img" src="https://i.scdn.co/image/ab67706f00000002fe6d8d1019d5b302213e3730"> 
           </a>
         </div>
       </section>
 
-
       <section>
         <div class="section-head-container">
-          <a href="#" class="section-head" style="color: white;"><h2>Выпуски для тебя</h2></a>
-          <a href="#" class="section-head-all" style="color: #b2b2b2;"><span>ВСЕ</span></a>
+          <a href="#" class="section-head" style="color: white;"><h2>Все остальное</h2></a>
         </div>
-        <div class="section-content">
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/2.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+        <div class="section-content-all-search">
+          <a href="#" class="genre-card color-39-133-106">
+            <h3 class="genre-card-head">Подкасты</h3>
+            <img class="genre-card-img" src="https://i.scdn.co/image/567158eb895ad26718a814345af0fc43ee785ec5" alt="Подкасты">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/3.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-30-50-100">
+            <h3 class="genre-card-head">Для тебя</h3>
+            <img class="genre-card-img" src="https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe" alt="Для тебя">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/4.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-141-103-171">
+            <h3 class="genre-card-head">Чарты</h3>
+            <img class="genre-card-img" src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg" alt="Чарты">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/5.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-232-17-91">
+            <h3 class="genre-card-head">Новые релизы</h3>
+            <img class="genre-card-img" src="https://i.scdn.co/image/ab67706f000000027ea4d505212b9de1f72c5112" alt="Новые релизы">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/2.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-30-50-100">
+            <h3 class="genre-card-head">Concerts</h3>
+            <img class="genre-card-img" src="https://t.scdn.co/images/8cfa9cb1e43a404db76eed6ad594057c" alt="Concerts">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/4.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-119-119-119">
+            <h3 class="genre-card-head">Тренировка</h3>
+            <img class="genre-card-img" src="https://i.scdn.co/image/ab67706f000000029249b35f23fb596b6f006a15" alt="Тренировка">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-39-133-106">
+            <h3 class="genre-card-head">Подкасты</h3>
+            <img class="genre-card-img" src="https://i.scdn.co/image/567158eb895ad26718a814345af0fc43ee785ec5" alt="Подкасты">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-30-50-100">
+            <h3 class="genre-card-head">Для тебя</h3>
+            <img class="genre-card-img" src="https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe" alt="Для тебя">
           </a>
-        </div>
-      </section>
-
-
-
-      <section>
-        <div class="section-head-container">
-          <a href="#" class="section-head" style="color: white;"><h2>Твои лучшие миксы</h2></a>
-          <a href="#" class="section-head-all" style="color: #b2b2b2;"><span>ВСЕ</span></a>
-        </div>
-        <div class="section-content">
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-141-103-171">
+            <h3 class="genre-card-head">Чарты</h3>
+            <img class="genre-card-img" src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg" alt="Чарты">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-232-17-91">
+            <h3 class="genre-card-head">Новые релизы</h3>
+            <img class="genre-card-img" src="https://i.scdn.co/image/ab67706f000000027ea4d505212b9de1f72c5112" alt="Новые релизы">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-30-50-100">
+            <h3 class="genre-card-head">Concerts</h3>
+            <img class="genre-card-img" src="https://t.scdn.co/images/8cfa9cb1e43a404db76eed6ad594057c" alt="Concerts">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-119-119-119">
+            <h3 class="genre-card-head">Тренировка</h3>
+            <img class="genre-card-img" src="https://i.scdn.co/image/ab67706f000000029249b35f23fb596b6f006a15" alt="Тренировка">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-39-133-106">
+            <h3 class="genre-card-head">Подкасты</h3>
+            <img class="genre-card-img" src="https://i.scdn.co/image/567158eb895ad26718a814345af0fc43ee785ec5" alt="Подкасты">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-30-50-100">
+            <h3 class="genre-card-head">Для тебя</h3>
+            <img class="genre-card-img" src="https://t.scdn.co/images/ea364e99656e46a096ea1df50f581efe" alt="Для тебя">
           </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
+          <a href="#" class="genre-card color-141-103-171">
+            <h3 class="genre-card-head">Чарты</h3>
+            <img class="genre-card-img" src="https://charts-images.scdn.co/assets/locale_en/regional/weekly/region_global_default.jpg" alt="Чарты">
           </a>
-
+          <a href="#" class="genre-card color-232-17-91">
+            <h3 class="genre-card-head">Новые релизы</h3>
+            <img class="genre-card-img" src="https://i.scdn.co/image/ab67706f000000027ea4d505212b9de1f72c5112" alt="Новые релизы">
+          </a>
+          <a href="#" class="genre-card color-30-50-100">
+            <h3 class="genre-card-head">Concerts</h3>
+            <img class="genre-card-img" src="https://t.scdn.co/images/8cfa9cb1e43a404db76eed6ad594057c" alt="Concerts">
+          </a>
+          <a href="#" class="genre-card color-119-119-119">
+            <h3 class="genre-card-head">Тренировка</h3>
+            <img class="genre-card-img" src="https://i.scdn.co/image/ab67706f000000029249b35f23fb596b6f006a15" alt="Тренировка">
+          </a>
         </div>
       </section>
     </main>
@@ -398,6 +307,8 @@
       </div>
     </footer>
     <div class="fake-footer"></div>
-    <script src="main.js"></script>
   </body>
+  <script>
+    document.querySelector('.ref-nav-main').setAttribute('href', localStorage['url'])
+  </script>
 </html>

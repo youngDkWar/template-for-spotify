@@ -5,6 +5,7 @@
     font-family: Proxima Nova;
     text-decoration: none;
 }
+
 .app{
     display: grid;
     height: 100vh;
@@ -342,10 +343,6 @@
     letter-spacing: -0.04em;
 }
 
-.main-playlist-span{
-    margin-left: 15px;
-}
-
 .section-start-content{
     min-height: 200px;
     margin-bottom: 20px;
@@ -591,8 +588,6 @@
 .btn-hover-white:hover{
     fill: white;
 }
-
-
 
 
 @font-face {

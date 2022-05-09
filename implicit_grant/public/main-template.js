@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="favicon.ico" />
-    <link rel="stylesheet" href="main-style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-
-    <title>React App</title>
-  </head>
-  <body class="app">
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+/**
+ * Шаблон главной страницы
+ */
+let main_page = `
     <div class="fake-header"></div>
     <header class="header">
       <div class="button-container">
@@ -98,205 +85,24 @@
     <main class="main">
 
       <section class="section-start-content">
-        <h2 class="start-main-content-title">Добрый вечер</h2>
-        <div class="start-main-content">
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/1.jpg">
-            <span class="main-playlist-span">BORN TO TRAP</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
-          </a>
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/3.jpg">
-            <span class="main-playlist-span">IVOXYGEN</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
-          </a>
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/4.jpg">
-            <span class="main-playlist-span">Imagine Dragons</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
-          </a>
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/2.jpg">
-            <span class="main-playlist-span">Mercury - Act 1</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
-          </a>
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/5.jpg">
-            <span class="main-playlist-span">Imagine Dragons - Bones</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
-          </a>
-          <a class="main-playlist" href="#">
-            <img class="main-playlist-img" src="images/6.jpg">
-            <span class="main-playlist-span">Karmageddon</span>
-            <div class="play-btn">
-              <svg viewBox="0 0 24 24" width="24" height="24">
-                <path d="M7.05 3.606l13.49 7.788a.7.7 0 010 1.212L7.05 20.394A.7.7 0 016 19.788V4.212a.7.7 0 011.05-.606z"></path>
-              </svg>
-            </div>
-          </a>
-        </div>
+        <h2 class="start-main-content-title"></h2>
+        <div class="start-main-content"></div>
       </section>
-
 
       <section>
         <div class="section-head-container">
           <a href="#" class="section-head" style="color: white;"><h2>Выпуски для тебя</h2></a>
           <a href="#" class="section-head-all" style="color: #b2b2b2;"><span>ВСЕ</span></a>
         </div>
-        <div class="section-content">
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/2.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/3.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/4.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/5.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/2.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/4.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-        </div>
+        <div class="section-content"></div>
       </section>
-
-
 
       <section>
         <div class="section-head-container">
-          <a href="#" class="section-head" style="color: white;"><h2>Твои лучшие миксы</h2></a>
+          <a href="#" class="section-head" style="color: white;"><h2>Популярные альбомы</h2></a>
           <a href="#" class="section-head-all" style="color: #b2b2b2;"><span>ВСЕ</span></a>
         </div>
-        <div class="section-content">
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-          <a href="#" class="card-container">
-            <img class="card-image" src="images/6.jpg">
-            <h3 class="card-head">Про хитрую бабульку</h3>
-            <div>
-              <span class="card-date">3 МАР.</span>
-              <span class="card-len"> 2 МИН.</span>
-            </div>
-          </a>
-
-        </div>
+        <div class="section-content popular-albums"></div>
       </section>
     </main>
 
@@ -398,6 +204,6 @@
       </div>
     </footer>
     <div class="fake-footer"></div>
-    <script src="main.js"></script>
-  </body>
-</html>
+`
+
+export default main_page;
