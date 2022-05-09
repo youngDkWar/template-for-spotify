@@ -72,7 +72,8 @@ import { main } from './main.js'
            *  и страница обновляется.
            */
           error: function (response){
-              alert(response)
+            console.log(response)
+            alert("Произошла ошибка. Сообщение можно найти в консоли (press f12)")  
           }
         });
       } else {
