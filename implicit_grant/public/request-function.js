@@ -50,6 +50,7 @@ function renderCardsOnPage(card_count, api_adress, ids_list, card_format) {
  * @param {Array} data - данные из запроса для отрисовки карточки
  */
 function appendStartMainContent(data) {
+    console.log(data)
     let track_card = document.createElement('a');
     track_card.classList.add('main-playlist');
     track_card.href = "#"
