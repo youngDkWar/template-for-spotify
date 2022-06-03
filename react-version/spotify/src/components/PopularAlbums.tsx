@@ -21,7 +21,7 @@ function PopularAlbums( props : Album ) {
     popularAlbums(props.id).then((data) => {
       setAlbum(data);
     });
-  });
+  }, []);
 
   return (
     <a className="card-container" target='_blank' rel="noreferrer" href={album.external_urls.spotify} key={album.id}>

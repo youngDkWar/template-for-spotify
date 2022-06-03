@@ -1,6 +1,5 @@
 import { scopes } from "./data/scope"
 import {clientId} from "./data/ClientID";
-import { Navigate } from "react-router-dom";
 import {authEndpoint, redirectUri, url} from "./data/endpoints"
 
 /**
@@ -32,6 +31,11 @@ interface QueryProps {
  */
 export const Spotify = () => { 
   const token = localStorage.getItem("token"); 
+
+
+  const isLogOut = () => { /* Проверка на выход */
+    return !token;
+  }
 
   /**
    * Это универсальная функция, которая принимает путь и тип запроса и возвращает данные, полученные по этому API-пути
@@ -101,9 +105,21 @@ export const Spotify = () => {
     });
   };
 
+  /** 
+   * Информация о пользователе 
+  */
+  const aboutMe = async () => {
+    return await callEndpoint({
+      path: `/me`,
+      method: "GET",
+    });
+  };
+
   return {
+    isLogOut,
     mainTracks,
     sectionEpisodes,
-    popularAlbums
+    popularAlbums,
+    aboutMe
   };
 };

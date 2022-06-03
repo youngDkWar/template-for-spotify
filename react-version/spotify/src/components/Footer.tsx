@@ -1,11 +1,8 @@
-//import trackImg from './images/7.jpg' 
-
-
-function Footer() {
+ function Footer() {
   return (
     <footer className="footer">
       <div className="track-info">
-        <img width="56" height="56" src="{trackImg}" alt="IVOXYGEN - room" />
+        <img width="56" height="56" src="images/7.jpg" alt="IVOXYGEN - room" />
         <div className="track-info-head">
           <a href="#" className="plaing-track-name">room</a>
           <a href="#" className="plaing-track-autor hover-white">IVOXYGEN</a>

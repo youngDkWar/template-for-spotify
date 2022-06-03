@@ -15,12 +15,16 @@ function MainBlock() {
     
           <section className="section-start-content">
             <h2 className="start-main-content-title">
+                {
+                    setPageTitle()
+                }
             </h2>
             <div className="start-main-content">
+                
                 {
                     shuffle(ids.track_list).slice(0, 6).map((item) => {
                         return(
-                            <StartMainContent id={item} ></StartMainContent>
+                            <StartMainContent id={item} key={item} ></StartMainContent>
                         )
                     })
                 }
@@ -37,7 +41,7 @@ function MainBlock() {
                 {
                     shuffle(ids.episodes_list).slice(0, 8).map((item) => {
                         return(
-                            <SectionContent id={item} ></SectionContent>
+                            <SectionContent id={item} key={item} ></SectionContent>
                         )
                     })
                 }
@@ -53,7 +57,7 @@ function MainBlock() {
                 {
                     shuffle(ids.popular_albums_list).slice(0, 8).map((item) => {
                         return(
-                            <PopularAlbums id={item} ></PopularAlbums>
+                            <PopularAlbums id={item} key={item} ></PopularAlbums>
                         )
                     })
                 }
@@ -82,17 +86,18 @@ function shuffle(array: string[]) {
     * @returns - ничего не возвращает (void)
 */
 function setPageTitle() {
-    let title = document.querySelector('.start-main-content-title')
+    let title = ''
     const time = new Date().getHours()
     if (time >= 6 && time < 12) {
-        title ? title.innerHTML = "Доброе утро": title = null;
+        title = "Доброе утро";
     } else if (time >= 12 && time <= 18) {
-        title ? title.innerHTML = "Добрый день": title = null;
+        title = "Добрый день";
     } else if (time >= 18 && time <= 23) {
-        title ? title.innerHTML = "Добрый вечер": title = null;
+        title = "Добрый вечер";
     } else {
-        title ? title.innerHTML = "Доброй ночи": title = null;
+        title = "Доброй ночи";
     }
+    return title
 }
 
 export default MainBlock;

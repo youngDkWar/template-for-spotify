@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { randomBytes, randomInt } from "crypto";
+import React, { useState, useEffect } from "react";
 import { Spotify } from "./spotify";
 
 interface Track{
@@ -17,10 +18,10 @@ function StartMainContent( props : Track ) {
     mainTracks(props.id).then((data) => {
       setTrack(data);
     });
-  });
+  }, []);
 
   return (
-    <a className="main-playlist" href="#" key={track.id}>
+    <a className="main-playlist" href="#">
       <img className="main-playlist-img" src={track.album.images[1].url} alt={track.name} />
       <span className="main-playlist-span">{track.name}</span>
       <div className="play-btn">

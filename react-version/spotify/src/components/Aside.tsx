@@ -1,11 +1,10 @@
-//import logo from './images/main_logo_white.svg';
 import { NavLink } from "react-router-dom";
 
 function Aside() {
   return (
     <aside className="main-aside">
       <NavLink to="/" className="ref-main-page">
-          <img className="main-logo" src="{logo}" alt="официальное лого Spotify" />
+          <img className="main-logo" src="images/main_logo_white.svg" alt="официальное лого Spotify" />
       </NavLink>
       <nav className="aside-main-nav">
         <NavLink to="/" className="ref-nav-main nav-font hover-white-delay">
