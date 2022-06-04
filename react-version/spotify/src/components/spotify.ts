@@ -53,7 +53,6 @@ export const Spotify = () => {
           return response;
         }
         else if (response.status === 401) {
-          alert('Sorry. You should re-authenticate')
           localStorage.removeItem("token");
           window.location.href = "http://localhost:3000/login";
         } 
@@ -63,7 +62,6 @@ export const Spotify = () => {
           window.location.reload();
         } 
         else if (response.status === 404) {
-          alert('Sorry. One or more of the albums dont responding. Page will be reload')
           window.location.reload();
         } 
         else {

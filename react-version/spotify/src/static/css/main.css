@@ -61,7 +61,7 @@
   margin: 0;
   min-width: 660px;
   max-width: 1955px;
-  /*background: linear-gradient(180deg, rgba(64,86,61,1) 0%, rgba(18,18,18,1) 30%);*/
+  background: linear-gradient(180deg, rgba(64,86,61,1) 0%, rgba(18,18,18,1) 30%);
 }
 
 .fake-footer{
