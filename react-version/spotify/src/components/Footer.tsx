@@ -1,5 +1,8 @@
  import Player from "./Player";
 
+ /**
+ * Функция возвращает элемент страницы footer
+ */
  function Footer() {
   return (
     <footer className="footer">

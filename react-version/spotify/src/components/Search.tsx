@@ -1,6 +1,8 @@
-//import logo from './images/main_logo_white.svg';
 import { NavLink } from "react-router-dom";
 
+/**
+ * Функция возвращает главный контент страницы поиска
+ */
 function Search() {
   return (
     <main className="main">

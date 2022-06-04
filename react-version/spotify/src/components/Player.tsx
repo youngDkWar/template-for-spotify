@@ -4,6 +4,9 @@ interface PlayerProps{
     url: string;
 }
 
+/**
+ * Функция должна добавлять на страницу возможность проиграть музыку (но она не работает) 
+ */
 const useAudio = (url: string) => {
   const [audio] = useState(new Audio(url));
   const [playing, setPlaying] = useState(false);

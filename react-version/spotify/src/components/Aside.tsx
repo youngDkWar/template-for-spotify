@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
 
+ /**
+ * Функция возвращает элемент страницы aside
+ */
 function Aside() {
   return (
     <aside className="main-aside">

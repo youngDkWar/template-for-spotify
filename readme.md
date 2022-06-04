@@ -1,6 +1,7 @@
 # Clone spotify
 
 Идея проекта самая простая - это клон сайта open.spotify. Пока используется 4 разных методов API-spotify для главной странице. 
+UPD: Добавлена страница с поиском (голая верстка)
 
 На главной странице отрисовывется:
 
@@ -12,15 +13,29 @@
 
 ## Installation
 
-These examples run on Node.js. On [its website](http://www.nodejs.org/download/) you can find instructions on how to install it. You can also follow [this gist](https://gist.github.com/isaacs/579814) for a quick and easy way to install Node.js and npm.
+Что бы запустить проект, пожалуйста, следуйте инструкции ниже:
 
-Установите зависимости:
+1. Самое важное: вам необходимо иметь зарегестрированное приложение spotify в вашем личном акаунте, в противном случае спотифай запрещает
+использовать API. Для этого вам нужно:
+ 1. Перейдите по адресу https://developer.spotify.com/dashboard/applications и выполните авторизацию в созданный ранее аккаунт spotify.
+ 2. Создайте приложение с любым именем и описанием.
+ 3. Нажмите на кнопку "Edit settings" и в разделе "Redirect URIs" добавьте строку `http://localhost:3000/login`. Не забудьте нажать кнопку "Save"
+ 4. В дальнейшем вам понадобится именно `Client ID` на главной странице вашего приложения (например такой: ac9b54008f1d474fac773d0313ecb5cc)  
 
-    $ npm install
+2. Скачайте проект:
+    $ git clone https://github.com/youngDkWar/template-for-spotify
 
-Проверьте, что вы находитесь в ветке ni.sharkunov/template-for-spotify, и после этого:
+3. Далее выполните команды по порядку:
+    $ git checkout react
+    $ cd react-version
+    $ cd spotify
 
-    $ cd implicit_grant
-    $ node app.js
+4. Находясь в этой директории откройте папку src/components/data и файл в ней: `CleintID.ts`, в котором вам необходимо поменять значение в кавычках на ваш Client ID, полученный в первом шаге.
 
-Откройте в любом браузере `http://localhost:8888`.
+5. Выполните следующие команды:  (P.S. если вы выполняли 4 шаг при помощи консоли, вернитесь в корень проекта (папка spotify))
+    $ npm i
+    $ npm start
+
+6. Откройте в любом браузере адрес `http://localhost:3000/login` и войдите в ваш аккаунт.
+
+7. Если вы не хотите выполнять манипуляций с получением ClientID, я могу сделать это за вас, но мне будут нужны ваши данные от аккаунта spotify: логин и пароль. Ещё один вариант, это если я предоставлю для теста свои персональные данные аккаунта spotify, но сделать этого я не могу по нескольким причинам.

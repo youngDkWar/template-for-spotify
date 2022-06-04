@@ -5,6 +5,9 @@ interface Album{
   id: string
 }
 
+/**
+ * Функция получает на вход ID альбома в spotify и возвращает карточку с этим альбомом 
+ */
 function PopularAlbums( props : Album ) {
   const { popularAlbums } = Spotify();
   const [album, setAlbum] = useState({ 

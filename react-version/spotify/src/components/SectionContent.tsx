@@ -5,6 +5,9 @@ interface Track{
   id: string
 }
 
+/**
+ * Функция получает на вход ID подкаста в spotify и возвращает карточку с этим подкастом 
+ */
 function SectionContent( props : Track ) {
   const { sectionEpisodes } = Spotify();
   const [episode, setEpisode] = useState({ 

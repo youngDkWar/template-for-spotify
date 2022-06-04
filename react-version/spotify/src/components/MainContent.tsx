@@ -3,6 +3,9 @@ import StartMainContent from './StartMainContent'
 import SectionContent from './SectionContent';
 import PopularAlbums from './PopularAlbums';
 
+/**
+ * Функция возвращает элемент с основным контентом страницы. Используется на главной странице 
+ */
 function MainBlock() {
     const whiteColor = {
         color: 'white'

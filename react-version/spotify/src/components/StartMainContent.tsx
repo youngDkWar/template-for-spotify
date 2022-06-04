@@ -6,6 +6,10 @@ interface Track{
   id: string
 }
 
+/**
+ * Функция получает на вход ID трэка в spotify и возвращает карточку с этим треком
+ */
+
 function StartMainContent( props : Track ) {
   const { mainTracks } = Spotify();
   const [track, setTrack] = useState({ 
