@@ -591,6 +591,14 @@
   color: white;
 }
 
+.white-color{
+  color: white;
+}
+
+.grey-color{
+  color: #b2b2b2;
+}
+
 .hover-white-delay:hover{
   color: white;
   transition-timing-function: linear;

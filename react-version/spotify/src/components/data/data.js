@@ -2,7 +2,7 @@
  * Массив с ID треков для главной страницы.
  * Можно добавлять свои (сколько угодно).
  */
-let track_list = [
+const track_list = [
     "3yPQ0T0w021ucbCqkKBku6",
     "1RZUlzNWbvCBeoSkapPgVR",
     "4uyDe8SeM0Nsgzp9KMtXWn",
@@ -20,7 +20,7 @@ let track_list = [
  * Массив с ID подкастов для главной страницы.
  * Можно добавлять свои, они появятся в общем списке подкастов на странице.
  */
-let episodes_list = [
+const episodes_list = [
     "6f9eaEw236X2US8Mf2utY0",
     "2WiLMdOnfWMaWIKfybMlvl",
     "0K2myq5sJJzOEzUCtEnpmc",
@@ -44,7 +44,7 @@ let episodes_list = [
  * Массив с ID популярных альбомов для главной страницы.
  * Можно добавлять свои, они появятся в общем списке популярных альбомов на странице.
  */
-let popular_albums_list = [
+const popular_albums_list = [
     "3SpBlxme9WbeQdI9kx7KAV",
     "6s84u2TUpR3wdUv4NgKA2j",
     "25L8ck3KGcmCo3901ztPzR",
@@ -75,4 +75,4 @@ let popular_albums_list = [
     "4SZko61aMnmgvNhfhgTuD3"
 ];
 
-export let ids = { 'track_list': track_list, 'episodes_list': episodes_list, 'popular_albums_list': popular_albums_list}
+export const ids = { 'track_list': track_list, 'episodes_list': episodes_list, 'popular_albums_list': popular_albums_list}

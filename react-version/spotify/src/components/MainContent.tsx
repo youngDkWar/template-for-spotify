@@ -7,12 +7,6 @@ import PopularAlbums from './PopularAlbums';
  * Функция возвращает элемент с основным контентом страницы. Используется на главной странице 
  */
 function MainBlock() {
-    const whiteColor = {
-        color: 'white'
-      };
-      const greyColor = {
-        color: '#b2b2b2'
-      }
       return(
         <main className="main">
     
@@ -37,8 +31,8 @@ function MainBlock() {
     
           <section>
             <div className="section-head-container">
-              <a href="#" className="section-head" style={whiteColor}><h2>Выпуски для тебя</h2></a>
-              <a href="#" className="section-head-all" style={greyColor}><span>ВСЕ</span></a>
+              <a href="#" className="section-head white-color"><h2>Выпуски для тебя</h2></a>
+              <a href="#" className="section-head-all grey-color"><span>ВСЕ</span></a>
             </div>
             <div className="section-content">
                 {
@@ -53,8 +47,8 @@ function MainBlock() {
     
           <section>
             <div className="section-head-container">
-              <a href="#" className="section-head" style={whiteColor}><h2>Популярные альбомы</h2></a>
-              <a href="#" className="section-head-all" style={greyColor}><span>ВСЕ</span></a>
+              <a href="#" className="section-head white-color"><h2>Популярные альбомы</h2></a>
+              <a href="#" className="section-head-all grey-color"><span>ВСЕ</span></a>
             </div>
             <div className="section-content popular-albums">
                 {

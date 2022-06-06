@@ -21,6 +21,7 @@ function StartMainContent( props : Track ) {
   useEffect(() => {
     mainTracks(props.id).then((data) => {
       setTrack(data);
+      console.log(data)
     });
   }, []);
 

@@ -11,7 +11,7 @@ export const getTokenFromUrl = () => {
     .substring(1)
     .split("&")
     .reduce((initial: { [parts: string]: string }, item) => {
-      let parts = item.split("=");
+      const parts = item.split("=");
       initial[parts[0]] = decodeURIComponent(parts[1]);
       return initial;
     }, {});
@@ -54,7 +54,7 @@ export const Spotify = () => {
         }
         else if (response.status === 401) {
           localStorage.removeItem("token");
-          window.location.href = "http://localhost:3000/login";
+          window.location.href = window.location.host + "/login";
         } 
         else if (response.status === 403) {
           alert('Auth error. Please try login again')
