@@ -1,6 +1,4 @@
- import Player from "./Player";
-
- /**
+/**
  * Функция возвращает элемент страницы footer
  */
  function Footer() {
@@ -67,8 +65,6 @@
           </div>  
         </div>
       </div>
-
-      <Player url="audio/1.mp3" ></Player>
 
       <div className="additional-btns">
         <div className="additional-btns-container">

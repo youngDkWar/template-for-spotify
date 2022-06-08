@@ -57,9 +57,9 @@ export const Spotify = () => {
           window.location.href = window.location.host + "/login";
         } 
         else if (response.status === 403) {
-          alert('Auth error. Please try login again')
+          console.log('Auth error. Please try login again')
           localStorage.removeItem("token");
-          window.location.reload();
+          window.location.href = window.location.host + "/login";
         } 
         else if (response.status === 404) {
           window.location.reload();
